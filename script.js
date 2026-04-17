@@ -4,12 +4,9 @@ function addNote() {
 
   li.textContent = input.value;
 
-  // SINGLE CLICK → EDIT
+  // CLICK → TOGGLE COMPLETE
   li.onclick = function () {
-    let newText = prompt("Edit your note:", li.textContent);
-    if (newText !== null && newText.trim() !== "") {
-      li.textContent = newText;
-    }
+    li.classList.toggle("completed");
   };
 
   // DOUBLE CLICK → DELETE
