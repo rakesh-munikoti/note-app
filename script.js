@@ -4,6 +4,11 @@ function addNote() {
 
   li.textContent = input.value;
 
+  // NEW FEATURE
+  li.onclick = function () {
+    li.remove();
+  };
+
   document.getElementById("notesList").appendChild(li);
   input.value = "";
 }
