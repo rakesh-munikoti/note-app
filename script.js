@@ -4,8 +4,16 @@ function addNote() {
 
   li.textContent = input.value;
 
-  // NEW FEATURE
+  // SINGLE CLICK → EDIT
   li.onclick = function () {
+    let newText = prompt("Edit your note:", li.textContent);
+    if (newText !== null && newText.trim() !== "") {
+      li.textContent = newText;
+    }
+  };
+
+  // DOUBLE CLICK → DELETE
+  li.ondblclick = function () {
     li.remove();
   };
 
