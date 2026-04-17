@@ -2,7 +2,12 @@ function addNote() {
   let input = document.getElementById("noteInput");
   let li = document.createElement("li");
 
-  li.textContent = input.value;
+  // GET CURRENT TIME
+  let now = new Date();
+  let time = now.toLocaleTimeString();
+
+  // ADD NOTE + TIME
+  li.textContent = input.value + " (" + time + ")";
 
   // CLICK → TOGGLE COMPLETE
   li.onclick = function () {
