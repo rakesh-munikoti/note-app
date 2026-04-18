@@ -2,12 +2,7 @@ function addNote() {
   let input = document.getElementById("noteInput");
   let li = document.createElement("li");
 
-  // GET CURRENT TIME
-  let now = new Date();
-  let time = now.toLocaleTimeString();
-
-  // ADD NOTE + TIME
-  li.textContent = input.value + " (" + time + ")";
+  li.textContent = input.value;
 
   // CLICK → TOGGLE COMPLETE
   li.onclick = function () {
@@ -21,4 +16,10 @@ function addNote() {
 
   document.getElementById("notesList").appendChild(li);
   input.value = "";
+}
+
+// NEW FEATURE: CLEAR ALL NOTES
+function clearNotes() {
+  let list = document.getElementById("notesList");
+  list.innerHTML = "";
 }
