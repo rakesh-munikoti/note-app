@@ -1,5 +1,5 @@
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Arial;
   text-align: center;
 }
 
@@ -7,6 +7,7 @@ li {
   margin: 10px;
   cursor: pointer;
 }
+
 .completed {
   text-decoration: line-through;
   color: gray;
